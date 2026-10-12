@@ -1,0 +1,9 @@
+{
+  "n_images": 5856,
+  "n_patient_groups": 2790,
+  "unparsed_filenames": 0,
+  "official_overlap_train_val": 0,
+  "official_overlap_train_test": 264,
+  "official_overlap_val_test": 0,
+  "pos_weight_train": 0.34739214423696074
+}

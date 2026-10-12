@@ -1,0 +1,4 @@
+,n_images,pneumonia_pct,patient_groups
+train,4185,74.2,2120
+val,1047,74.2,530
+test,624,62.5,404
