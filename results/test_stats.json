@@ -1,0 +1,18 @@
+{
+  "auc_diff_resnet_minus_simplecnn": {
+    "diff": 0.042324128862590404,
+    "lo": 0.026569664808954223,
+    "hi": 0.061516921497889496,
+    "p_value": 0.0005
+  },
+  "mcnemar_at_val_thresholds": {
+    "only_a_correct": 62,
+    "only_b_correct": 7,
+    "p_value": 4.102799046681871e-12
+  },
+  "mcnemar_at_0.5": {
+    "only_a_correct": 71,
+    "only_b_correct": 27,
+    "p_value": 1.0112752137598311e-05
+  }
+}

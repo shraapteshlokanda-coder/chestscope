@@ -23,8 +23,9 @@ class SimpleCNN(nn.Module):
         return self.head(self.features(x))
 
 
-def build_resnet18(freeze_backbone=True):
-    m = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
+def build_resnet18(freeze_backbone=True, pretrained=True):
+    weights = models.ResNet18_Weights.IMAGENET1K_V1 if pretrained else None
+    m = models.resnet18(weights=weights)
     if freeze_backbone:
         for p in m.parameters():
             p.requires_grad = False
@@ -35,3 +36,10 @@ def build_resnet18(freeze_backbone=True):
 def unfreeze_all(model):
     for p in model.parameters():
         p.requires_grad = True
+
+
+def unfreeze_layers(model, names=("layer3", "layer4", "fc")):
+    """Unfreeze only the named top-level modules (e.g. layer3, layer4, fc)."""
+    for n, p in model.named_parameters():
+        if n.split(".")[0] in names:
+            p.requires_grad = True

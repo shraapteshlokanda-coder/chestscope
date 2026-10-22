@@ -1,0 +1,67 @@
+Reused Checkpoint 2 ResNet18 run as base_s42
+base_s42: already done, skipping
+
+=== lr3e-4_s42: {'lr_backbone': 0.0003, 'unfreeze': 'all'} ===
+ep 01/4 | train 0.236 | val 0.188 | AUC 0.971 | rec 0.669 | spec 1.000 | 56s
+ep 02/4 | train 0.150 | val 0.147 | AUC 0.975 | rec 0.790 | spec 0.996 | 58s
+ep 03/4 | train 0.132 | val 0.174 | AUC 0.977 | rec 0.730 | spec 1.000 | 54s
+ep 04/4 | train 0.116 | val 0.135 | AUC 0.978 | rec 0.820 | spec 0.996 | 56s
+ep 01/6 | train 0.083 | val 0.062 | AUC 0.995 | rec 0.929 | spec 0.989 | 62s
+ep 02/6 | train 0.047 | val 0.034 | AUC 0.997 | rec 0.969 | spec 0.981 | 44s
+ep 03/6 | train 0.038 | val 0.081 | AUC 0.997 | rec 0.918 | spec 0.996 | 45s
+ep 04/6 | train 0.034 | val 0.027 | AUC 0.998 | rec 0.972 | spec 0.993 | 45s
+ep 05/6 | train 0.024 | val 0.079 | AUC 0.998 | rec 0.902 | spec 1.000 | 44s
+ep 06/6 | train 0.031 | val 0.049 | AUC 0.998 | rec 0.941 | spec 1.000 | 45s
+
+=== layer34_s42: {'lr_backbone': 0.0001, 'unfreeze': 'layer34'} ===
+ep 01/4 | train 0.236 | val 0.188 | AUC 0.971 | rec 0.669 | spec 1.000 | 45s
+ep 02/4 | train 0.150 | val 0.147 | AUC 0.975 | rec 0.790 | spec 0.996 | 46s
+ep 03/4 | train 0.132 | val 0.174 | AUC 0.977 | rec 0.730 | spec 1.000 | 44s
+ep 04/4 | train 0.116 | val 0.135 | AUC 0.978 | rec 0.820 | spec 0.996 | 48s
+ep 01/6 | train 0.065 | val 0.049 | AUC 0.993 | rec 0.952 | spec 0.989 | 45s
+ep 02/6 | train 0.047 | val 0.044 | AUC 0.995 | rec 0.961 | spec 0.985 | 43s
+ep 03/6 | train 0.036 | val 0.052 | AUC 0.997 | rec 0.938 | spec 0.996 | 42s
+ep 04/6 | train 0.028 | val 0.065 | AUC 0.998 | rec 0.929 | spec 0.993 | 43s
+ep 05/6 | train 0.024 | val 0.051 | AUC 0.997 | rec 0.945 | spec 0.996 | 45s
+ep 06/6 | train 0.022 | val 0.033 | AUC 0.998 | rec 0.956 | spec 0.993 | 44s
+
+  config  lr_backbone unfreeze  val_auc  val_recall  val_specificity  val_f1  val_loss
+   base       0.0001      all   0.9982      0.9691           0.9963  0.9837    0.0299
+ lr3e-4       0.0003      all   0.9984      0.9408           1.0000  0.9695    0.0490
+layer34       0.0001  layer34   0.9981      0.9562           0.9926  0.9763    0.0329
+Best config on validation: base
+base_s42: already done, skipping
+
+=== base_s1: {'lr_backbone': 0.0001, 'unfreeze': 'all'} ===
+ep 01/4 | train 0.223 | val 0.169 | AUC 0.972 | rec 0.731 | spec 0.985 | 45s
+ep 02/4 | train 0.145 | val 0.171 | AUC 0.976 | rec 0.736 | spec 0.993 | 45s
+ep 03/4 | train 0.127 | val 0.164 | AUC 0.978 | rec 0.750 | spec 0.993 | 43s
+ep 04/4 | train 0.120 | val 0.101 | AUC 0.979 | rec 0.883 | spec 0.978 | 43s
+ep 01/6 | train 0.070 | val 0.041 | AUC 0.995 | rec 0.967 | spec 0.974 | 45s
+ep 02/6 | train 0.050 | val 0.042 | AUC 0.997 | rec 0.960 | spec 0.989 | 45s
+ep 03/6 | train 0.028 | val 0.038 | AUC 0.997 | rec 0.988 | spec 0.974 | 45s
+ep 04/6 | train 0.031 | val 0.086 | AUC 0.996 | rec 0.911 | spec 0.993 | 44s
+ep 05/6 | train 0.021 | val 0.069 | AUC 0.998 | rec 0.931 | spec 1.000 | 44s
+ep 06/6 | train 0.019 | val 0.042 | AUC 0.998 | rec 0.943 | spec 1.000 | 44s
+
+=== base_s2: {'lr_backbone': 0.0001, 'unfreeze': 'all'} ===
+ep 01/4 | train 0.224 | val 0.193 | AUC 0.971 | rec 0.664 | spec 0.996 | 44s
+ep 02/4 | train 0.147 | val 0.163 | AUC 0.975 | rec 0.749 | spec 0.993 | 43s
+ep 03/4 | train 0.125 | val 0.134 | AUC 0.977 | rec 0.817 | spec 0.989 | 43s
+ep 04/4 | train 0.123 | val 0.111 | AUC 0.978 | rec 0.862 | spec 0.985 | 45s
+ep 01/6 | train 0.077 | val 0.032 | AUC 0.997 | rec 0.981 | spec 0.978 | 46s
+ep 02/6 | train 0.048 | val 0.105 | AUC 0.995 | rec 0.875 | spec 0.996 | 45s
+ep 03/6 | train 0.035 | val 0.035 | AUC 0.998 | rec 0.961 | spec 0.993 | 45s
+ep 04/6 | train 0.028 | val 0.046 | AUC 0.997 | rec 0.946 | spec 0.989 | 44s
+ep 05/6 | train 0.026 | val 0.024 | AUC 0.998 | rec 0.986 | spec 0.989 | 44s
+ep 06/6 | train 0.021 | val 0.022 | AUC 0.998 | rec 0.981 | spec 0.996 | 44s
+
+Seed variability:
+  seed  val_auc  val_recall  val_specificity  val_f1
+   42   0.9982      0.9691           0.9963  0.9837
+    1   0.9980      0.9434           1.0000  0.9709
+    2   0.9984      0.9807           0.9963  0.9896
+resnet18: threshold 0.2423 -> val recall 0.981, specificity 0.996
+simplecnn: threshold 0.0379 -> val recall 0.955, specificity 0.952
+
+WEEK 3 TRAINING DONE. Final model: results/checkpoints/final.pt, thresholds: results/threshold.json
